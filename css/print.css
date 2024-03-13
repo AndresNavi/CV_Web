@@ -1,0 +1,88 @@
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    transform-origin: top;
+  }
+
+  header {
+    display: flex;
+    height: 80px;
+    background-color: red !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+  }
+
+  .foto img {
+    top: 1em;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 4em;
+  }
+
+  .name {
+    text-shadow: none !important;
+  }
+
+  .container2 {
+    max-height: none !important;
+  }
+
+  .bloqueder {
+    padding-top: 0.3em;
+  }
+
+  .boxder {
+    margin: 5px auto;
+  }
+
+  .bloqueizq {
+    padding: 2em;
+  }
+
+  .boxizq {
+    margin: 5px 0;
+  }
+  .tecno li {
+    margin-bottom: 2px;
+  }
+
+  .perfil {
+    display: none;
+  }
+  button {
+    display: none;
+  }
+
+  h1 {
+    font-size: x-large;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: medium;
+  }
+
+  h3 {
+    font-size: medium;
+    padding-top: 2px;
+  }
+  h4,
+  h5,
+  h6 {
+    font-size: small;
+    padding: 5px;
+  }
+
+  footer {
+    display: none;
+  }
+}

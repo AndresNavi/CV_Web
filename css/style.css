@@ -1,0 +1,344 @@
+/* INDICE
+  *Cuerpo de la página y estilos generales que engloban toda la landing.
+  En esta sección está modificado el body, fuentes y estilos de texto.
+
+  *Estilos referentes al Header. Posiciones, fondo y estilos.
+
+  *Estilos del bloque izquierdo de contenido de la página.
+    **Estilos para lista de tecnologías con logos.
+  *Estilos del bloque derecho de contenido de la página.
+
+  *++++Estilo y funcionalidad de botones IMPRIMIR Y OCULTAR.
+
+  *Estilo del FOOTER.
+
+  *=======Mediaquery para pantalla de móvil.
+*/
+
+@import url("print.css") print;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Cuerpo de la página y estilos generales ======================================================== */
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 5em;
+  font-family: "montserrat-light", serif;
+  font-size: 1rem;
+  background-color: #d7d7d7;
+}
+.container2 {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 0.6fr 1fr;
+  gap: 0;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  color: inherit;
+}
+h2 {
+  color: black;
+  font-family: "League Spartan", serif;
+  letter-spacing: 2px;
+  font-size: 1.5em;
+}
+h3 {
+  font-family: "League Spartan", serif;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+  color: #38b6ff;
+}
+h4 {
+  color: black;
+  font-family: "League Spartan", serif;
+  letter-spacing: 2px;
+  font-size: 1.1rem;
+  padding: 0.5em 0 0.2em 0;
+}
+h5,
+h6 {
+  color: black;
+  font-family: "montserrat-light", serif;
+  letter-spacing: 1px;
+  font-style: italic;
+  font-size: 1rem;
+  padding: 1em 0 0.5em 0;
+}
+p {
+  line-height: 1.4;
+}
+li {
+  line-height: 1.5;
+}
+/* FIN Cuerpo de la página y estilos generales ================================================*/
+
+/* CABECERA / TÍTULO ==========================================================================*/
+
+header {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 0.6fr 1fr;
+  gap: 0.5em;
+  text-align: center;
+  position: relative;
+  border: solid 2px black;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url(/images/fondo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  filter: blur(2px);
+  z-index: -1;
+}
+
+.foto img {
+  position: relative;
+  top: 6.5em;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.name {
+  display: flex;
+  position: relative;
+  font-family: "League Spartan", serif;
+  color: #38b6ff;
+  text-shadow: 2px 2px 4px black;
+  font-size: 2rem;
+  text-align: left;
+  align-items: flex-end;
+  letter-spacing: 1px;
+}
+
+/* FIN CABECERA / TÍTULO ===================================================================*/
+
+/* Disposición SECTION IZQUIERDA ===========================================================*/
+
+.bloqueizq {
+  padding: 8em 1.2em 0 1.2em;
+  background-image: url(/images/stars.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.boxizq {
+  margin: 1em;
+}
+.perfil {
+  background-color: rgba(128, 128, 128, 0.46);
+  border-radius: 3em;
+  padding: 1em;
+  position: relative;
+  right: 1em;
+}
+/* ESTILOS DE LA LISTA TECNOLOGÍAS */
+.tecno {
+  padding: 0;
+}
+.tecno li {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+.tecno li img {
+  margin-right: 8px;
+}
+
+/* FIN ESTILOS LISTA TECNOLOGÍAS */
+
+/* FIN Disposición SECTION IZQUIERDA ================================================================= */
+/* Disposición SECTION DERECHA ========================================================================*/
+.bloqueder {
+  background-color: whitesmoke;
+  padding-top: 3em;
+}
+.boxder {
+  margin: 0 0.5em 3em 0.5em;
+}
+/* FIN Disposición SECTION DERECHA =====================================================================*/
+
+/* Estilo de los botones 
+================================================================================================================================ */
+
+/* BOTON IMPRIMIR +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.btn {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(to top, #38b6ff, #12376e, #3360a4);
+  color: #fff;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: fixed;
+  top: 10px;
+  left: 15px;
+  box-shadow: 0 15px 30px whitesmoke;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.btn span {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: top 0.5s;
+}
+
+.btn-text-one {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.btn-text-two {
+  position: absolute;
+  width: 100%;
+  top: 150%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.btn:hover .btn-text-one {
+  top: -100%;
+}
+
+.btn:hover .btn-text-two {
+  top: 50%;
+}
+/* FIN BOTON IMPRIMIR ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+/* BOTON DESPLEGAR +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+#desplegar {
+  --hover-shadows: 16px 16px 33px #121212, -16px -16px 33px #303030;
+  --accent: #0015ff;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border: none;
+  border-radius: 1.5em;
+  background-color: #38b6ff;
+  cursor: pointer;
+  color: white;
+  padding: 1em;
+  transition: box-shadow ease-in-out 0.1s, background-color ease-in-out 0.1s,
+    letter-spacing ease-in-out 0.1s, transform ease-in-out 0.1s;
+  position: absolute;
+  margin: 3em;
+}
+
+#desplegar:active {
+  box-shadow: var(--hover-shadows), var(--accent) 0px 0px 30px 5px;
+  background-color: var(--accent);
+  transform: scale(0.95);
+}
+/* Animación despliegue */
+/* Agrega la propiedad max-height al contenedor2 */
+.container2 {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+.ocultar {
+  max-height: 0 !important;
+}
+
+.container2:not(.ocultar) {
+  max-height: none;
+}
+
+/* FIN BOTON DESPLEGAR +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+/* FOOTER
+================================================================================================== */
+
+#copyright {
+  text-align: center;
+}
+.fondofooter {
+  background-image: url(/images/fondo.jpg);
+  height: 150px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.fondofooter2 {
+  background-color: #38b6ff;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1em;
+}
+
+/* Media query para pantallas más pequeñas ==========================================================
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* Media query para pantallas más pequeñas */
+@media screen and (max-width: 650px) {
+  body {
+    padding: 0 0.5em;
+  }
+
+  header,
+  .container2,
+  .bloqueizq,
+  .bloqueder {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 0.2em;
+    text-align: center;
+  }
+
+  header {
+    grid-template-columns: 1fr;
+  }
+
+  .foto {
+    margin-bottom: 0.5em;
+  }
+
+  .foto img {
+    position: static;
+    width: 58%;
+    height: 58%;
+  }
+  #desplegar {
+    position: static;
+  }
+
+  h1 {
+    font-size: x-large;
+    text-align: center;
+  }
+  .tecno li {
+    text-align: center !important;
+    justify-content: center;
+  }
+}
