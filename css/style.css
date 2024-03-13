@@ -102,7 +102,7 @@ header::before {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: url(../../images/fondo.jpg);
+  background-image: url(../images/fondo.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
